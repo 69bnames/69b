@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>69B Store</title>
+  <style>
+    body{
+      margin:0;
+      font-family:Arial, sans-serif;
+      background:#790719;
+      color:white;
+      text-align:center;
+    }
+    .logo{
+      font-size:80px;
+      font-weight:bold;
+      margin-top:80px;
+    }
+    .card{
+      background:white;
+      color:#790719;
+      margin:20px auto;
+      padding:25px;
+      width:85%;
+      max-width:500px;
+      border-radius:22px;
+      font-size:22px;
+      font-weight:bold;
+      cursor:pointer;
+    }
+    .small{
+      display:block;
+      font-size:14px;
+      color:#555;
+      margin-top:8px;
+    }
+    .names{
+      display:none;
+      padding:20px;
+    }
+    .name{
+      display:inline-block;
+      background:white;
+      color:#790719;
+      padding:12px 18px;
+      margin:8px;
+      border-radius:14px;
+      font-weight:bold;
+      text-decoration:none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logo">69B</div>
+  <h1>69B Store</h1>
+
+  <div id="home">
+    <div class="card" onclick="show('quad')">
+      يوزرات انستا رباعية وشبه ثلاثي
+      <span class="small">يبدأ السعر من 140 ويزداد حسب اليوزر</span>
+    </div>
+
+    <div class="card" onclick="show('triple')">
+      يوزرات انستا ثلاثية وشبه ثنائي
+      <span class="small">يبدأ السعر من 1600 ويزداد حسب اليوزر</span>
+    </div>
+
+    <div class="card" onclick="show('double')">
+      يوزرات انستا ثنائية
+      <span class="small">يبدأ السعر من 15 الف ويزداد حسب اليوزر</span>
+    </div>
+  </div>
+
+  <div id="quad" class="names">
+    <h2>يوزرات رباعية</h2>
+    <a class="name" href="https://www.instagram.com/69bstore?igsh=MWVvdHRvcnoyYTdwbQ%3D%3D&utm_source=qr">4u.z</a>
+    <a class="name" href="https://www.instagram.com/69bstore?igsh=MWVvdHRvcnoyYTdwbQ%3D%3D&utm_source=qr">7x.y</a>
+    <a class="name" href="https://www.instagram.com/69bstore?igsh=MWVvdHRvcnoyYTdwbQ%3D%3D&utm_source=qr">a1.q</a>
+    <a class="name" href="https://www.instagram.com/69bstore?igsh=MWVvdHRvcnoyYTdwbQ%3D%3D&utm_source=qr">b2.m</a>
+    <a class="name" href="https://www.instagram.com/69bstore?igsh=MWVvdHRvcnoyYTdwbQ%3D%3D&utm_source=qr">c3.n</a>
+    <br><br>
+    <button onclick="back()">رجوع</button>
+  </div>
+
+  <div id="triple" class="names">
+    <h2>يوزرات ثلاثية</h2>
+    <a class="name" href="https://www.instagram.com/69bstore?igsh=MWVvdHRvcnoyYTdwbQ%3D%3D&utm_source=qr">AFA</a>
+    <a class="name" href="https://www.instagram.com/69bstore?igsh=MWVvdHRvcnoyYTdwbQ%3D%3D&utm_source=qr">AXA</a>
+    <a class="name" href="https://www.instagram.com/69bstore?igsh=MWVvdHRvcnoyYTdwbQ%3D%3D&utm_source=qr">AQA</a>
+    <a class="name" href="https://www.instagram.com/69bstore?igsh=MWVvdHRvcnoyYTdwbQ%3D%3D&utm_source=qr">AMA</a>
+    <a class="name" href="https://www.instagram.com/69bstore?igsh=MWVvdHRvcnoyYTdwbQ%3D%3D&utm_source=qr">ARA</a>
+    <br><br>
+    <button onclick="back()">رجوع</button>
+  </div>
+
+  <div id="double" class="names">
+    <h2>يوزرات ثنائية</h2>
+    <a class="name" href="https://www.instagram.com/69bstore?igsh=MWVvdHRvcnoyYTdwbQ%3D%3D&utm_source=qr">A7</a>
+    <a class="name" href="https://www.instagram.com/69bstore?igsh=MWVvdHRvcnoyYTdwbQ%3D%3D&utm_source=qr">A3</a>
+    <a class="name" href="https://www.instagram.com/69bstore?igsh=MWVvdHRvcnoyYTdwbQ%3D%3D&utm_source=qr">AX</a>
+    <a class="name" href="https://www.instagram.com/69bstore?igsh=MWVvdHRvcnoyYTdwbQ%3D%3D&utm_source=qr">5A</a>
+    <a class="name" href="https://www.instagram.com/69bstore?igsh=MWVvdHRvcnoyYTdwbQ%3D%3D&utm_source=qr">AQ</a>
+    <br><br>
+    <button onclick="back()">رجوع</button>
+  </div>
+
+<script>
+function show(id){
+  document.getElementById('home').style.display='none';
+  document.getElementById(id).style.display='block';
+}
+
+function back(){
+  document.getElementById('quad').style.display='none';
+  document.getElementById('triple').style.display='none';
+  document.getElementById('double').style.display='none';
+  document.getElementById('home').style.display='block';
+}
+</script>
+
+</body>
+</html>
