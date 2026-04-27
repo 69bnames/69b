@@ -1,150 +1,250 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>69B Store</title>
 
 <style>
+*{box-sizing:border-box}
 body{
-margin:0;
-font-family:-apple-system,BlinkMacSystemFont;
-background:#7a0d16;
-color:white;
-text-align:center;
+  margin:0;
+  min-height:100vh;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  background:
+    radial-gradient(circle at top,#a00f27 0%,#7b0718 42%,#33050b 100%);
+  color:white;
 }
-.container{padding:20px;max-width:600px;margin:auto;}
-h1{font-size:40px;margin-top:20px;}
+.screen{
+  display:none;
+  min-height:100vh;
+  padding:42px 22px 34px;
+}
+.screen.active{display:block}
+.wrap{max-width:520px;margin:0 auto}
+.logoBox{
+  width:122px;height:122px;
+  margin:10px auto 28px;
+  border-radius:34px;
+  background:#85091b;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 22px 60px rgba(0,0,0,.32), inset 0 0 0 1px rgba(255,255,255,.14);
+}
+.logoBox img{width:100%;height:100%;object-fit:cover;border-radius:34px}
+.tag{
+  letter-spacing:7px;
+  font-size:13px;
+  color:rgba(255,255,255,.68);
+  margin-bottom:12px;
+  text-transform:uppercase;
+}
+h1{
+  margin:0;
+  font-size:42px;
+  line-height:1.05;
+  font-weight:800;
+}
+.sub{
+  margin:22px auto 34px;
+  max-width:430px;
+  color:rgba(255,255,255,.78);
+  font-size:18px;
+  line-height:1.8;
+}
 .card{
-background:white;
-color:#7a0d16;
-padding:20px;
-margin:15px 0;
-border-radius:20px;
-font-size:18px;
-cursor:pointer;
-box-shadow:0 10px 30px rgba(0,0,0,0.2);
+  width:100%;
+  border:0;
+  text-align:right;
+  margin:16px 0;
+  padding:24px 24px;
+  border-radius:30px;
+  background:linear-gradient(180deg,#fff,#f4f4f6);
+  color:#7b0718;
+  box-shadow:0 18px 45px rgba(0,0,0,.26);
+  cursor:pointer;
 }
-.small{font-size:14px;color:#555;}
-.list{display:none;}
-.username{
-background:white;
-color:#000;
-padding:12px;
-margin:6px;
-border-radius:12px;
-display:inline-block;
-cursor:pointer;
+.card:active{transform:scale(.985)}
+.card .row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+}
+.title{
+  font-size:23px;
+  font-weight:800;
+}
+.icon{
+  font-size:30px;
+  width:44px;
+  height:44px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.small{
+  margin-top:9px;
+  font-size:14px;
+  color:#555;
+  line-height:1.6;
 }
 .back{
-margin-top:20px;
-display:inline-block;
-background:#fff;
-color:#7a0d16;
-padding:10px 20px;
-border-radius:10px;
-cursor:pointer;
+  background:rgba(255,255,255,.12);
+  color:white;
+  border:1px solid rgba(255,255,255,.22);
+  border-radius:999px;
+  padding:12px 18px;
+  margin-bottom:22px;
+  cursor:pointer;
+  font-size:15px;
+}
+.sectionTitle{
+  font-size:34px;
+  font-weight:850;
+  margin:18px 0 8px;
+}
+.sectionSub{
+  color:rgba(255,255,255,.72);
+  margin-bottom:28px;
+  line-height:1.8;
+}
+.buy{
+  text-decoration:none;
+  display:block;
+  text-align:center;
 }
 </style>
-
 </head>
+
 <body>
 
-<div class="container" id="home">
+<!-- الصفحة الرئيسية -->
+<section id="home" class="screen active">
+  <div class="wrap">
+    <div class="logoBox">
+      <img src="https://i.imgur.com/4FhQq7N.png" alt="69B Logo">
+    </div>
 
-<h1>69B Store</h1>
+    <div class="tag">PREMIUM USERNAMES</div>
+    <h1>69B Store</h1>
+    <p class="sub">اختر المنصة المناسبة، ثم شاهد الفئات المتاحة والأسعار المبدئية.</p>
 
-<div class="card" onclick="show('quad')">
-يوزرات انستا رباعية وشبه ثلاثي
-<div class="small">يبدأ السعر من 140 ويزداد حسب اليوزر</div>
-</div>
+    <button class="card" onclick="show('snap')">
+      <div class="row">
+        <div>
+          <div class="title">يوزرات سناب</div>
+        </div>
+        <div class="icon">👻</div>
+      </div>
+    </button>
 
-<div class="card" onclick="show('triple')">
-يوزرات انستا ثلاثية وشبه ثنائي
-<div class="small">يبدأ السعر من 1600 ويزداد حسب اليوزر</div>
-</div>
+    <button class="card" onclick="show('instagram')">
+      <div class="row">
+        <div>
+          <div class="title">يوزرات انستا</div>
+        </div>
+        <div class="icon">📸</div>
+      </div>
+    </button>
 
-<div class="card" onclick="show('double')">
-يوزرات انستا ثنائية
-<div class="small">يبدأ السعر من 15 ألف ويزداد حسب اليوزر</div>
-</div>
+    <button class="card" onclick="show('set')">
+      <div class="row">
+        <div>
+          <div class="title">طقم</div>
+          <div class="small">يوزرات مطابقة انستا وسناب</div>
+        </div>
+        <div class="icon">💎</div>
+      </div>
+    </button>
 
-</div>
+    <a class="card buy" href="https://www.instagram.com/69bstore?igsh=MWVvdHRvcnoyYTdwbQ%3D%3D&utm_source=qr">
+      <div class="row">
+        <div>
+          <div class="title">التواصل للشراء</div>
+        </div>
+        <div class="icon">💬</div>
+      </div>
+    </a>
+  </div>
+</section>
 
-<!-- رباعي -->
-<div class="container list" id="quad">
-<h2>الرباعيات</h2>
+<!-- انستا -->
+<section id="instagram" class="screen">
+  <div class="wrap">
+    <button class="back" onclick="show('home')">رجوع</button>
 
-<div id="quadList"></div>
+    <div class="sectionTitle">يوزرات انستا</div>
+    <div class="sectionSub">اختر الفئة المناسبة، والسعر يختلف حسب قوة وتميّز اليوزر.</div>
 
-<div class="back" onclick="back()">رجوع</div>
-</div>
+    <button class="card">
+      <div class="title">يوزرات انستا رباعي وشبه ثلاثي</div>
+      <div class="small">تبدأ من 140 ريال أو من 140 درهم وتزداد حسب اليوزر</div>
+    </button>
+    <button class="card">
+      <div class="title">يوزرات انستا ثلاثي وشبه ثنائي</div>
+      <div class="small">تبدأ من 1600 ريال أو من 1600 درهم وتزداد حسب اليوزر</div>
+    </button>
 
-<!-- ثلاثي -->
-<div class="container list" id="triple">
-<h2>الثلاثيات</h2>
+    <button class="card">
+      <div class="title">يوزرات انستا ثنائي</div>
+      <div class="small">تبدأ من 15000 ريال أو من 15000 درهم وتزداد حسب اليوزر</div>
+    </button>
+  </div>
+</section>
 
-<div id="tripleList"></div>
+<!-- سناب -->
+<section id="snap" class="screen">
+  <div class="wrap">
+    <button class="back" onclick="show('home')">رجوع</button>
 
-<div class="back" onclick="back()">رجوع</div>
-</div>
+    <div class="sectionTitle">يوزرات سناب</div>
+    <div class="sectionSub">اختر الفئة المناسبة، والسعر يختلف حسب قوة وتميّز اليوزر.</div>
 
-<!-- ثنائي -->
-<div class="container list" id="double">
-<h2>الثنائيات</h2>
+    <button class="card">
+      <div class="title">يوزرات سناب رباعي وشبه ثلاثي</div>
+      <div class="small">تبدأ من 250 ريال أو من 250 درهم وتزداد حسب اليوزر</div>
+    </button>
 
-<div id="doubleList"></div>
+    <button class="card">
+      <div class="title">يوزرات سناب ثلاثي وشبه ثنائي</div>
+      <div class="small">تبدأ من 2500 ريال أو من 2500 درهم وتزداد حسب اليوزر</div>
+    </button>
 
-<div class="back" onclick="back()">رجوع</div>
-</div>
+    <button class="card">
+      <div class="title">يوزرات سناب ثنائي</div>
+      <div class="small">تبدأ من 18000 ريال أو من 18000 درهم وتزداد حسب اليوزر</div>
+    </button>
+  </div>
+</section>
+
+<!-- طقم -->
+<section id="set" class="screen">
+  <div class="wrap">
+    <button class="back" onclick="show('home')">رجوع</button>
+
+    <div class="sectionTitle">طقم انستا وسناب</div>
+    <div class="sectionSub">يوزرات مطابقة للمنصتين. للتوفر والسعر النهائي تواصل مباشرة.</div>
+
+    <a class="card buy" href="https://www.instagram.com/69bstore?igsh=MWVvdHRvcnoyYTdwbQ%3D%3D&utm_source=qr">
+      <div class="row">
+        <div>
+          <div class="title">اضغط هنا للتواصل للشراء</div>
+          <div class="small">سيتم تحويلك إلى انستغرام 69B Store</div>
+        </div>
+        <div class="icon">💬</div>
+      </div>
+    </a>
+  </div>
+</section>
 
 <script>
-
-const insta="https://www.instagram.com/69bstore";
-
 function show(id){
-document.getElementById("home").style.display="none";
-document.querySelectorAll(".list").forEach(e=>e.style.display="none");
-document.getElementById(id).style.display="block";
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
 }
-
-function back(){
-document.getElementById("home").style.display="block";
-document.querySelectorAll(".list").forEach(e=>e.style.display="none");
-}
-
-function make(list,box){
-list.forEach(u=>{
-let d=document.createElement("div");
-d.className="username";
-d.innerText=u;
-d.onclick=()=>window.open(insta);
-box.appendChild(d);
-});
-}
-
-/* بيانات */
-
-const quad=[
-"4u.z","7x.y","a1.q","b2.m","c3.n","d4.p","e5.r","f6.s",
-"g7.t","h8.u","i9.v","j0.w","k1.x","l2.y","m3.z"
-];
-
-const triple=[
-"AFA","AXA","AQA","AMA","ARA","AA5","A8A","3AA",
-"AZZ","APP","ARR","AGG","ATT","A22","A77"
-];
-
-const double=[
-"A7","A3","AX","5A","AQ","B7","B3","BX",
-"C7","C3","CX","5C","CQ"
-];
-
-/* عرض */
-make(quad,document.getElementById("quadList"));
-make(triple,document.getElementById("tripleList"));
-make(double,document.getElementById("doubleList"));
-
 </script>
 
 </body>
