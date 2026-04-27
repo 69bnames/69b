@@ -1,122 +1,150 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>69B Store</title>
-  <style>
-    body{
-      margin:0;
-      font-family:Arial, sans-serif;
-      background:#790719;
-      color:white;
-      text-align:center;
-    }
-    .logo{
-      font-size:80px;
-      font-weight:bold;
-      margin-top:80px;
-    }
-    .card{
-      background:white;
-      color:#790719;
-      margin:20px auto;
-      padding:25px;
-      width:85%;
-      max-width:500px;
-      border-radius:22px;
-      font-size:22px;
-      font-weight:bold;
-      cursor:pointer;
-    }
-    .small{
-      display:block;
-      font-size:14px;
-      color:#555;
-      margin-top:8px;
-    }
-    .names{
-      display:none;
-      padding:20px;
-    }
-    .name{
-      display:inline-block;
-      background:white;
-      color:#790719;
-      padding:12px 18px;
-      margin:8px;
-      border-radius:14px;
-      font-weight:bold;
-      text-decoration:none;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>69B Store</title>
+
+<style>
+body{
+margin:0;
+font-family:-apple-system,BlinkMacSystemFont;
+background:#7a0d16;
+color:white;
+text-align:center;
+}
+.container{padding:20px;max-width:600px;margin:auto;}
+h1{font-size:40px;margin-top:20px;}
+.card{
+background:white;
+color:#7a0d16;
+padding:20px;
+margin:15px 0;
+border-radius:20px;
+font-size:18px;
+cursor:pointer;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+.small{font-size:14px;color:#555;}
+.list{display:none;}
+.username{
+background:white;
+color:#000;
+padding:12px;
+margin:6px;
+border-radius:12px;
+display:inline-block;
+cursor:pointer;
+}
+.back{
+margin-top:20px;
+display:inline-block;
+background:#fff;
+color:#7a0d16;
+padding:10px 20px;
+border-radius:10px;
+cursor:pointer;
+}
+</style>
+
 </head>
 <body>
 
-  <div class="logo">69B</div>
-  <h1>69B Store</h1>
+<div class="container" id="home">
 
-  <div id="home">
-    <div class="card" onclick="show('quad')">
-      يوزرات انستا رباعية وشبه ثلاثي
-      <span class="small">يبدأ السعر من 140 ويزداد حسب اليوزر</span>
-    </div>
+<h1>69B Store</h1>
 
-    <div class="card" onclick="show('triple')">
-      يوزرات انستا ثلاثية وشبه ثنائي
-      <span class="small">يبدأ السعر من 1600 ويزداد حسب اليوزر</span>
-    </div>
+<div class="card" onclick="show('quad')">
+يوزرات انستا رباعية وشبه ثلاثي
+<div class="small">يبدأ السعر من 140 ويزداد حسب اليوزر</div>
+</div>
 
-    <div class="card" onclick="show('double')">
-      يوزرات انستا ثنائية
-      <span class="small">يبدأ السعر من 15 الف ويزداد حسب اليوزر</span>
-    </div>
-  </div>
+<div class="card" onclick="show('triple')">
+يوزرات انستا ثلاثية وشبه ثنائي
+<div class="small">يبدأ السعر من 1600 ويزداد حسب اليوزر</div>
+</div>
 
-  <div id="quad" class="names">
-    <h2>يوزرات رباعية</h2>
-    <a class="name" href="https://www.instagram.com/69bstore?igsh=MWVvdHRvcnoyYTdwbQ%3D%3D&utm_source=qr">4u.z</a>
-    <a class="name" href="https://www.instagram.com/69bstore?igsh=MWVvdHRvcnoyYTdwbQ%3D%3D&utm_source=qr">7x.y</a>
-    <a class="name" href="https://www.instagram.com/69bstore?igsh=MWVvdHRvcnoyYTdwbQ%3D%3D&utm_source=qr">a1.q</a>
-    <a class="name" href="https://www.instagram.com/69bstore?igsh=MWVvdHRvcnoyYTdwbQ%3D%3D&utm_source=qr">b2.m</a>
-    <a class="name" href="https://www.instagram.com/69bstore?igsh=MWVvdHRvcnoyYTdwbQ%3D%3D&utm_source=qr">c3.n</a>
-    <br><br>
-    <button onclick="back()">رجوع</button>
-  </div>
+<div class="card" onclick="show('double')">
+يوزرات انستا ثنائية
+<div class="small">يبدأ السعر من 15 ألف ويزداد حسب اليوزر</div>
+</div>
 
-  <div id="triple" class="names">
-    <h2>يوزرات ثلاثية</h2>
-    <a class="name" href="https://www.instagram.com/69bstore?igsh=MWVvdHRvcnoyYTdwbQ%3D%3D&utm_source=qr">AFA</a>
-    <a class="name" href="https://www.instagram.com/69bstore?igsh=MWVvdHRvcnoyYTdwbQ%3D%3D&utm_source=qr">AXA</a>
-    <a class="name" href="https://www.instagram.com/69bstore?igsh=MWVvdHRvcnoyYTdwbQ%3D%3D&utm_source=qr">AQA</a>
-    <a class="name" href="https://www.instagram.com/69bstore?igsh=MWVvdHRvcnoyYTdwbQ%3D%3D&utm_source=qr">AMA</a>
-    <a class="name" href="https://www.instagram.com/69bstore?igsh=MWVvdHRvcnoyYTdwbQ%3D%3D&utm_source=qr">ARA</a>
-    <br><br>
-    <button onclick="back()">رجوع</button>
-  </div>
+</div>
 
-  <div id="double" class="names">
-    <h2>يوزرات ثنائية</h2>
-    <a class="name" href="https://www.instagram.com/69bstore?igsh=MWVvdHRvcnoyYTdwbQ%3D%3D&utm_source=qr">A7</a>
-    <a class="name" href="https://www.instagram.com/69bstore?igsh=MWVvdHRvcnoyYTdwbQ%3D%3D&utm_source=qr">A3</a>
-    <a class="name" href="https://www.instagram.com/69bstore?igsh=MWVvdHRvcnoyYTdwbQ%3D%3D&utm_source=qr">AX</a>
-    <a class="name" href="https://www.instagram.com/69bstore?igsh=MWVvdHRvcnoyYTdwbQ%3D%3D&utm_source=qr">5A</a>
-    <a class="name" href="https://www.instagram.com/69bstore?igsh=MWVvdHRvcnoyYTdwbQ%3D%3D&utm_source=qr">AQ</a>
-    <br><br>
-    <button onclick="back()">رجوع</button>
-  </div>
+<!-- رباعي -->
+<div class="container list" id="quad">
+<h2>الرباعيات</h2>
+
+<div id="quadList"></div>
+
+<div class="back" onclick="back()">رجوع</div>
+</div>
+
+<!-- ثلاثي -->
+<div class="container list" id="triple">
+<h2>الثلاثيات</h2>
+
+<div id="tripleList"></div>
+
+<div class="back" onclick="back()">رجوع</div>
+</div>
+
+<!-- ثنائي -->
+<div class="container list" id="double">
+<h2>الثنائيات</h2>
+
+<div id="doubleList"></div>
+
+<div class="back" onclick="back()">رجوع</div>
+</div>
 
 <script>
+
+const insta="https://www.instagram.com/69bstore";
+
 function show(id){
-  document.getElementById('home').style.display='none';
-  document.getElementById(id).style.display='block';
+document.getElementById("home").style.display="none";
+document.querySelectorAll(".list").forEach(e=>e.style.display="none");
+document.getElementById(id).style.display="block";
 }
 
 function back(){
-  document.getElementById('quad').style.display='none';
-  document.getElementById('triple').style.display='none';
-  document.getElementById('double').style.display='none';
-  document.getElementById('home').style.display='block';
+document.getElementById("home").style.display="block";
+document.querySelectorAll(".list").forEach(e=>e.style.display="none");
 }
+
+function make(list,box){
+list.forEach(u=>{
+let d=document.createElement("div");
+d.className="username";
+d.innerText=u;
+d.onclick=()=>window.open(insta);
+box.appendChild(d);
+});
+}
+
+/* بيانات */
+
+const quad=[
+"4u.z","7x.y","a1.q","b2.m","c3.n","d4.p","e5.r","f6.s",
+"g7.t","h8.u","i9.v","j0.w","k1.x","l2.y","m3.z"
+];
+
+const triple=[
+"AFA","AXA","AQA","AMA","ARA","AA5","A8A","3AA",
+"AZZ","APP","ARR","AGG","ATT","A22","A77"
+];
+
+const double=[
+"A7","A3","AX","5A","AQ","B7","B3","BX",
+"C7","C3","CX","5C","CQ"
+];
+
+/* عرض */
+make(quad,document.getElementById("quadList"));
+make(triple,document.getElementById("tripleList"));
+make(double,document.getElementById("doubleList"));
+
 </script>
 
 </body>
