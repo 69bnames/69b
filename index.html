@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>69B Store</title>
 
 <style>
@@ -66,21 +66,21 @@ h1{margin:0;font-size:42px;line-height:1.05;font-weight:800}
     <h1>69B Store</h1>
     <p class="sub">اختر المنصة المناسبة، ثم شاهد الفئات المتاحة والأسعار المبدئية.</p>
 
-    <button class="card" onclick="show('snap')">
+    <button class="card" onclick="showPage('snap')">
       <div class="row">
         <div><div class="title">يوزرات سناب</div></div>
         <div class="icon"><img src="snapchat.png" class="icon-img"></div>
       </div>
     </button>
 
-    <button class="card"onclick="show('instagram')">
+    <button class="card" onclick="showPage('instagram')">
       <div class="row">
         <div><div class="title">يوزرات انستا</div></div>
         <div class="icon"><img src="instagram.png" class="icon-img"></div>
       </div>
     </button>
 
-    <button class="card" onclick="show('set')">
+    <button class="card" onclick="showPage('set')">
       <div class="row">
         <div>
           <div class="title">طقم</div>
@@ -101,41 +101,145 @@ h1{margin:0;font-size:42px;line-height:1.05;font-weight:800}
 
 <section id="instagram" class="screen">
   <div class="wrap">
-    <button class="back" onclick="show('home')">رجوع</button>
+    <button class="back" onclick="showPage('home')">رجوع</button>
     <div class="sectionTitle">يوزرات انستا</div>
-    "رباعيات مكررة": d3cc f4dd g5ee h6ff i7gg j8hh k9ii l0jj m1kk n2ll o3mm p4nn q5oo r6pp s7qq t8rr u9ss v0tt w1uu x2vv y3ww z4xx a5yy b6zz c7aa d8bb e9cc f0dd g1ee h2ff i3gg j4hh k5ii l6jj m7kk n8ll o9mm p0nn q1oo r2pp s3qq t4rr u5ss v6tt w7uu x8vv y9ww z0xx a1yy b2zz c3aa d4bb e5cc f6dd g7ee h8ff i9gg j0hh k1ii l2jj m3kk n4ll o5mm p6nn q7oo r8pp s9qq t0rr u1ss b77r c88e f33y g99t h22o j11u k44p m66i n55a o00s q77w r88l s33d t99c u22v w11n x44f z66g a55q b00h c77j d88k e33z f99x g22m h11v i44b j66n k55m l00p m77r n88e o33y p99t q22o r11u s44p t66i u55a v00s w77w x88l y33d z99c a22v b11n c44f d66g e55q f00h g77j h88k i33z j99x k22m l11v m44b n66n o55m p00p q77r r88e s33y t99t u22o v11u w44p x66i y55a z00s a77w b88l c33d d99c e22v f11n g44f h66g i55q j00h k77j l88k m33z n99x o22m p11v q44b r66n s55m t00p u77r v88e w33y x99t y22o z11u a44p b66i c55a,
-"رباعيات عادية": r4tt m4ku j0ke q1pl f1zz b4sh z1pp l4me d3fy h4rm p0wr g0ne k1nd v4mp x4mi y4nk w1nn c0ol s4ge n1ce t0ny r0xy b4nk f0xx m1nt z3ro p1nk j4zz q4ke d1ce h0pe k0re v0id x1st y0ga w4ll c4ke s1nk n4me t1me r4nd m4ze j1nx q0rt f0ur b4ld z0om l4nd d4rk h0ot p4ce g4me k4le v4ns x0de y1nk w4ve c4sh s4il n1pe t0on r1ch m0on j0ys q4il f4st b4ze z4ny l0ve d0ck h1ke p4ge g4ng k4rm v4st x0ld y0ut w1ld c4rd s4lt n4il t4lk r4ce m1st j4ws q4nt f4me b4ck z0ne l4ce d4wn h4te p1nk g1ft k0zy v0lt x1st y4wn w1sh c4fe a9tg b3nx c8yl d7wr e6pk f5qm g2vh h1zx i4mf j6bc k8dy l9jw m2zr n3lx o5vk p4my q7wn r1hf s9pb t2kc u3dx v4yg w8nm x5tr y6zw z1lp a7fh b0qx c4vn d2kw e9jt f3ry g6mz h5wp i8bk j1cv k2yh l3px m4jn n6qt o7rw p9zf q0lk r2gy s1xm t5nv u4cj v3rh w6kp x8dw
+    <div class="sectionSub">اختر الفئة المناسبة، والسعر يختلف حسب قوة وتميّز اليوزر.</div>
+
+    <button class="card" onclick="showPage('instaQuad')">
+      <div class="title">يوزرات انستا رباعي وشبه ثلاثي</div>
+      <div class="small">تبدأ من 140 ريال أو من 140 درهم وتزداد حسب اليوزر</div>
+    </button>
+
+    <button class="card">
+      <div class="title">يوزرات انستا ثلاثي وشبه ثنائي</div>
+      <div class="small">تبدأ من 1600 ريال أو من 1600 درهم وتزداد حسب اليوزر</div>
+    </button>
+
+    <button class="card">
+      <div class="title">يوزرات انستا ثنائي</div>
+      <div class="small">تبدأ من 15000 ريال أو من 15000 درهم وتزداد حسب اليوزر</div>
+    </button>
+  </div>
+</section>
+
+<section id="snap" class="screen">
+  <div class="wrap">
+    <button class="back" onclick="showPage('home')">رجوع</button>
+    <div class="sectionTitle">يوزرات سناب</div>
+    <div class="sectionSub">اختر الفئة المناسبة، والسعر يختلف حسب قوة وتميّز اليوزر.</div>
+
+    <button class="card">
+      <div class="title">يوزرات سناب رباعي وشبه ثلاثي</div>
+      <div class="small">تبدأ من 250 ريال أو من 250 درهم وتزداد حسب اليوزر</div>
+    </button>
+
+    <button class="card">
+      <div class="title">يوزرات سناب ثلاثي وشبه ثنائي</div>
+      <div class="small">تبدأ من 2500 ريال أو من 2500 درهم وتزداد حسب اليوزر</div>
+    </button>
+
+    <button class="card">
+      <div class="title">يوزرات سناب ثنائي</div>
+      <div class="small">تبدأ من 18000 ريال أو من 18000 درهم وتزداد حسب اليوزر</div>
+    </button>
+  </div>
+</section>
+
+<section id="set" class="screen">
+  <div class="wrap">
+    <button class="back" onclick="showPage('home')">رجوع</button>
+    <div class="sectionTitle">طقم انستا وسناب</div>
+    <div class="sectionSub">يوزرات مطابقة للمنصتين. للتوفر والسعر النهائي تواصل مباشرة.</div>
+
+    <a class="card buy" href="https://www.instagram.com/69bstore?igsh=MTNvbHQ5b3JlenV0eQ==">
+      <div class="row">
+        <div>
+          <div class="title">اضغط هنا للتواصل للشراء</div>
+          <div class="small">سيتم تحويلك إلى انستغرام 69B Store</div>
+        </div>
+        <div class="icon">💬</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section id="instaQuad" class="screen">
+  <div class="wrap">
+    <button class="back" onclick="showPage('instagram')">رجوع</button>
+    <div class="sectionTitle">رباعيات انستا وشبه ثلاثي</div>
+    <div class="sectionSub">اختر اليوزر المناسب، وسيتم تحويلك مباشرة للتواصل والشراء.</div>
+    <div id="instaQuadList"></div>
+  </div>
+</section>
+
+<script>
+var instaLink = "https://www.instagram.com/69bstore?igsh=MTNvbHQ5b3JlenV0eQ==";
+
+var instaQuadGroups = {
+  "شبه ثلاثي نقطة": [
+    "4u.z","7x.y","a1.q","b2.m","c3.n","d4.p","e5.r","f6.s","g7.t","h8.u","i9.v","j0.w","k1.x","l2.y","m3.z","n4.a","o5.b","p6.c","q7.d","r8.e","s9.f","t0.g","u1.h","v2.i","w3.j","x4.k","y5.l","z6.m","a7.n","b8.o","c9.p","d0.q","e1.r","f2.s","g3.t","h4.u","i5.v","j6.w","k7.x","l8.y","m9.z","n0.a","o1.b","p2.c","q3.d","r4.e","s5.f","t6.g","u7.h","x1.y","y2.z","z3.a","a4.b","b5.c","c6.d","d7.e","e8.f","f9.g","g0.h","h1.i","i2.j","j3.k","k4.l","l5.m","m6.n","n7.o","o8.p","p9.q","q0.r","r1.s","s2.t","t3.u","u4.v","v5.w","w6.x","x7.y","y8.z","z9.a","a0.b","b1.c","c2.d","d3.e","e4.f","f5.g","g6.h","h7.i","i8.j","j9.k","k0.l","l1.m","m2.n","n3.o","o4.p","p5.q","q6.r","r7.s","s8.t","t9.u","u0.v"
+  ],
+  "شبه ثلاثي شخطة": [
+    "v5_c","a1_d","b2_e","c3_f","d4_g","e5_h","f6_i","g7_j","h8_k","i9_l","j0_m","k1_n","l2_o","m3_p","n4_q","o5_r","p6_s","q7_t","r8_u","s9_v","t0_w","u1_x","v2_y","w3_z","x4_a","y5_b","z6_c","a7_d","b8_e","c9_f","d0_g","e1_h","f2_i","g3_j","h4_k","i5_l","j6_m","k7_n","l8_o","m9_p","n0_q","o1_r","p2_s","q3_t","r4_u","s5_v","t6_w","u7_x","v8_y","w9_z","n1_a","m2_b","l3_c","k4_d","j5_e","i6_f","h7_g","g8_h","f9_i","e0_j","d1_k","c2_l","b3_m","a4_n","z5_o","y6_p","x7_q","w8_r","v9_s","u0_t","t1_u","s2_v","r3_w","q4_x","p5_y","o6_z","n7_a","m8_b","l9_c","k0_d","j1_e","i2_f","h3_g","g4_h","f5_i","e6_j","d7_k","c8_l","b9_m","a0_n","z1_o","y2_p","x3_q","w4_r","v5_s","u6_t","t7_u","s8_v","r9_w","q0_x"
+  ],
+  "رباعيات مكررة": [
+    "d3cc","f4dd","g5ee","h6ff","i7gg","j8hh","k9ii","l0jj","m1kk","n2ll","o3mm","p4nn","q5oo","r6pp","s7qq","t8rr","u9ss","v0tt","w1uu","x2vv","y3ww","z4xx","a5yy","b6zz","c7aa","d8bb","e9cc","f0dd","g1ee","h2ff","i3gg","j4hh","k5ii","l6jj","m7kk","n8ll","o9mm","p0nn","q1oo","r2pp","s3qq","t4rr","u5ss","v6tt","w7uu","x8vv","y9ww","z0xx","a1yy","b2zz","c3aa","d4bb","e5cc","f6dd","g7ee","h8ff","i9gg","j0hh","k1ii","l2jj","m3kk","n4ll","o5mm","p6nn","q7oo","r8pp","s9qq","t0rr","u1ss","b77r","c88e","f33y","g99t","h22o","j11u","k44p","m66i","n55a","o00s","q77w","r88l","s33d","t99c","u22v","w11n","x44f","z66g","a55q","b00h","c77j","d88k","e33z","f99x","g22m","h11v","i44b","j66n","k55m","l00p","m77r","n88e","o33y","p99t","q22o","r11u","s44p","t66i","u55a","v00s","w77w","x88l","y33d","z99c","a22v","b11n","c44f","d66g","e55q","f00h","g77j","h88k","i33z","j99x","k22m","l11v","m44b","n66n","o55m","p00p","q77r","r88e","s33y","t99t","u22o","v11u","w44p","x66i","y55a","z00s","a77w","b88l","c33d","d99c","e22v","f11n","g44f","h66g","i55q","j00h","k77j","l88k","m33z","n99x","o22m","p11v","q44b","r66n","s55m","t00p","u77r","v88e","w33y","x99t","y22o","z11u","a44p","b66i","c55a"
+  ],
+  "رباعيات عادية": [
+    "r4tt","m4ku","j0ke","q1pl","f1zz","b4sh","z1pp","l4me","d3fy","h4rm","p0wr","g0ne","k1nd","v4mp","x4mi","y4nk","w1nn","c0ol","s4ge","n1ce","t0ny","r0xy","b4nk","f0xx","m1nt","z3ro","p1nk","j4zz","q4ke","d1ce","h0pe","k0re","v0id","x1st","y0ga","w4ll","c4ke","s1nk","n4me","t1me","r4nd","m4ze","j1nx","q0rt","f0ur","b4ld","z0om","l4nd","d4rk","h0ot","p4ce","g4me","k4le","v4ns","x0de","y1nk","w4ve","c4sh","s4il","n1pe","t0on","r1ch","m0on","j0ys","q4il","f4st","b4ze","z4ny","l0ve","d0ck","h1ke","p4ge","g4ng","k4rm","v4st","x0ld","y0ut","w1ld","c4rd","s4lt","n4il","t4lk","r4ce","m1st","j4ws","q4nt","f4me","b4ck","z0ne","l4ce","d4wn","h4te","p1nk","g1ft","k0zy","v0lt","x1st","y4wn","w1sh","c4fe","a9tg","b3nx","c8yl","d7wr","e6pk","f5qm","g2vh","h1zx","i4mf","j6bc","k8dy","l9jw","m2zr","n3lx","o5vk","p4my","q7wn","r1hf","s9pb","t2kc","u3dx","v4yg","w8nm","x5tr","y6zw","z1lp","a7fh","b0qx","c4vn","d2kw","e9jt","f3ry","g6mz","h5wp","i8bk","j1cv","k2yh","l3px","m4jn","n6qt","o7rw","p9zf","q0lk","r2gy","s1xm","t5nv","u4cj","v3rh","w6kp","x8dw"
+  ]
 };
 
+function showPage(id){
+  var screens = document.querySelectorAll(".screen");
+  for(var i=0;i<screens.length;i++){
+    screens[i].classList.remove("active");
+  }
+
+  var target = document.getElementById(id);
+  if(target){
+    target.classList.add("active");
+  }
+
+  if(id === "instaQuad"){
+    renderInstaQuad();
+  }
+
+  window.scrollTo(0,0);
+}
+
 function renderInstaQuad(){
-  const box = document.getElementById("instaQuadList");
-  if(!box || box.dataset.ready === "1") return;
-  Object.entries(instaQuadGroups).forEach(([title,names])=>{
-    const block=document.createElement("div");
-    block.className="usernameBlock";
-    const h=document.createElement("h3");
-    h.textContent=title;
-    const grid=document.createElement("div");
-    grid.className="usernameGrid";
-    names.split(/\s+/).filter(Boolean).forEach(name=>{
-      const btn=document.createElement("button");
-      btn.className="userBubble";
-      btn.textContent=name;
-      btn.onclick=()=>window.location.href=instaLink;
+  var box = document.getElementById("instaQuadList");
+  if(!box || box.getAttribute("data-ready") === "1") return;
+
+  for(var title in instaQuadGroups){
+    var block = document.createElement("div");
+    block.className = "usernameBlock";
+
+    var h = document.createElement("h3");
+    h.textContent = title;
+
+    var grid = document.createElement("div");
+    grid.className = "usernameGrid";
+
+    var names = instaQuadGroups[title];
+
+    for(var i=0;i<names.length;i++){
+      var btn = document.createElement("button");
+      btn.className = "userBubble";
+      btn.textContent = names[i];
+      btn.onclick = function(){
+        window.location.href = instaLink;
+      };
       grid.appendChild(btn);
-    });
+    }
+
     block.appendChild(h);
     block.appendChild(grid);
     box.appendChild(block);
-  });
-  box.dataset.ready="1";
-}
+  }
 
-function show(id){
-  document.querySelectorAll(".screen").forEach(s=>s.classList.remove("active"));
-  document.getElementById(id).classList.add("active");
-  if(id==="instaQuad") renderInstaQuad();
-  window.scrollTo({top:0,behavior:"smooth"});
+  box.setAttribute("data-ready","1");
 }
 </script>
 
