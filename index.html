@@ -172,6 +172,16 @@ h1{margin:0;font-size:42px;line-height:1.05;font-weight:800}
     <div id="lettersGrid" class="usernameGrid"></div>
   </div>
 </section>
+  <section id="instaTripleNames" class="screen">
+  <div class="wrap">
+    <button class="back" onclick="showPage('instaTripleLetters')">رجوع</button>
+
+    <div class="sectionTitle" id="tripleLetterTitle">يوزرات ثلاثية</div>
+    <div class="sectionSub">اختر اليوزر المناسب، وسيتم تحويلك مباشرة للتواصل والشراء.</div>
+
+    <div id="tripleNamesGrid" class="usernameGrid"></div>
+  </div>
+</section>
 <section id="instaQuad" class="screen">
   <div class="wrap">
     <button class="back" onclick="showPage('instagram')">رجوع</button>
@@ -197,8 +207,16 @@ var instaQuadGroups = {
   "رباعيات عادية": [
     "r4tt","m4ku","j0ke","q1pl","f1zz","b4sh","z1pp","l4me","d3fy","h4rm","p0wr","g0ne","k1nd","v4mp","x4mi","y4nk","w1nn","c0ol","s4ge","n1ce","t0ny","r0xy","b4nk","f0xx","m1nt","z3ro","p1nk","j4zz","q4ke","d1ce","h0pe","k0re","v0id","x1st","y0ga","w4ll","c4ke","s1nk","n4me","t1me","r4nd","m4ze","j1nx","q0rt","f0ur","b4ld","z0om","l4nd","d4rk","h0ot","p4ce","g4me","k4le","v4ns","x0de","y1nk","w4ve","c4sh","s4il","n1pe","t0on","r1ch","m0on","j0ys","q4il","f4st","b4ze","z4ny","l0ve","d0ck","h1ke","p4ge","g4ng","k4rm","v4st","x0ld","y0ut","w1ld","c4rd","s4lt","n4il","t4lk","r4ce","m1st","j4ws","q4nt","f4me","b4ck","z0ne","l4ce","d4wn","h4te","p1nk","g1ft","k0zy","v0lt","x1st","y4wn","w1sh","c4fe","a9tg","b3nx","c8yl","d7wr","e6pk","f5qm","g2vh","h1zx","i4mf","j6bc","k8dy","l9jw","m2zr","n3lx","o5vk","p4my","q7wn","r1hf","s9pb","t2kc","u3dx","v4yg","w8nm","x5tr","y6zw","z1lp","a7fh","b0qx","c4vn","d2kw","e9jt","f3ry","g6mz","h5wp","i8bk","j1cv","k2yh","l3px","m4jn","n6qt","o7rw","p9zf","q0lk","r2gy","s1xm","t5nv","u4cj","v3rh","w6kp","x8dw"
   ]
+var instaTripleGroups = {
+  "A": ["AFA","AXA","AQA","AMA","ARA","AA5","A8A","3AA","AA2","A1A","AZZ","ZAZ","APP","PAP","ARR","RAR","AGG","GAG","ATT","TAT","A22","2A2","22A","A77","7A7","A55","5A5","A.Z","A.4","6.A","A.X","9.A","A.2","A_K","K_A","3_A","A_7","_AZ","_4A","A_Q","_A9","A8T","A3K","A9R","A5M","A2V","A7H","A4X","A1P","A6D","A8B","ABX","ABK","ABQ","ABM","ABT","ABR","ABV","ACD","AKM","ARX","AQT","AZP","ALV","AWH","AYR","AUG","AXF","A29","A83","A47","A65","A94","A38"],
+  "B": ["BFA","BXB","BQB","BMB","BRB","BB6","B4B","7BB","BB2","B9B","BZZ","ZBZ","BPP","PBP","BRR","RBR","BGG","GBG","BTT","TBT","B22","2B2","22B","B77","7B7","B55","5B5","B.Z","B.3","6.B","B.X","8.B","B.1","B_K","K_B","4_B","B_7","_BZ","_6B","B_Q","_B9","B7X","B3K","B9R","B5M","B2V","B8H","B4T","B1P","B6D","B8B","BBX","BBK","BBQ","BBM","BBT","BBR","BBV","BCD","BKM","BRX","BQT","BZP","BLV","BWH","BYR","BUG","BXF","B29","B83","B47","B65","B94","B38"],
+  "C": ["CFA","CXC","CQC","CMC","CRC","CC6","C4C","7CC","CC2","C9C","CZZ","ZCZ","CPP","PCP","CRR","RCR","CGG","GCG","CTT","TCT","C22","2C2","22C","C77","7C7","C55","5C5","C.Z","C.3","6.C","C.X","8.C","C.1","C_K","K_C","4_C","C_7","_CZ","_6C","C_Q","_C9","C7X","C3K","C9R","C5M","C2V","C8H","C4T","C1P","C6D","C8B","CBX","CBK","CBQ","CBM","CBT","CBR","CBV","CCD","CKM","CRX","CQT","CZP","CLV","CWH","CYR","CUG","CXF","C29","C83","C47","C65","C94","C38"],
+  "D": ["DFA","DXD","DQD","DMD","DRD","DD7","D5D","2DD","DD3","D8D","DZZ","ZDZ","DPP","PDP","DRR","RDR","DGG","GDG","DTT","TDT","D22","2D2","22D","D88","8D8","D44","4D4","D.Z","D.6","3.D","D.X","7.D","D.2","D_K","K_D","6_D","D_9","_DZ","_5D","D_Q","_D4","D8X","D3K","D9R","D5M","D2V","D7H","D4T","D1P","D6D","D8B","DBX","DBK","DBQ","DBM","DBT","DBR","DBV","DCD","DKM","DRX","DQT","DZP","DLV","DWH","DYR","DUG","DXF","D29","D83","D47","D65","D94","D38"],
+  "E": ["EHK","EAE","EJP","EZE","E6E","4EE","E2E","EE9","E8E","EE3","EWW","WEW","ENN","NEN","EOO","OEO","EQQ","QEQ","EYY","YEY","E44","4E4","66E","E77","8E8","E11","1E1","E.R","5.E","E.8","E.T","3.E","E.G","9.E","E_X","P_E","6_E","E_4","_EH","_7E","E_L","_E2","E3V","E8K","E1Z","E7B","E5R","E2X","E9H","E4C","E6Q","E8T","EJX","EPN","EZQ","ELB","EKR","EVH","EYG","EDM","EUC","E38","E91","E47","E62","E85","E14"],
+  "F": ["FQH","FZF","FDP","F7F","3FF","F1F","FF8","F6F","FF2","FMM","MFM","FNN","NFN","FUU","UFU","FYY","YFY","FSS","SFS","F33","3F3","99F","F44","5F5","F22","2F2","F.W","8.F","F.1","F.K","4.F","F.Z","7.F","F_P","R_F","6_F","F_8","_FD","_5F","F_T","_F3","F4V","F8K","F1Z","F7B","F5R","F2X","F9H","F4C","F6Q","F8T","FJX","FPN","FZQ","FLB","FKR","FVH","FYG","FDM","FUC","F38","F91","F47","F62","F85","F14"],
+  "G": ["GXF","GAG","GKP","G9G","2GG","G4G","GG7","G1G","GG3","GTT","TGT","GDD","DGD","GWW","WGW","GNN","NGN","GYY","YGY","G55","5G5","88G","G22","7G7","G44","4G4","G.X","6.G","G.3","G.K","9.G","G.Q","2.G","G_L","H_G","3_G","G_6","_GV","_8G","G_P","_G1","G5Z","G2K","G9X","G4R","G7M","G1T","G8C","G6B","G3H","G8Q","GZX","GPN","GLQ","GKB","GTR","GVH","GYD","GCM","GUF","G38","G91","G47","G62","G85","G14"]
 };
-function renderLetters(){
+  function renderLetters(){
   var box = document.getElementById("lettersGrid");
   if(!box || box.getAttribute("data-ready") === "1") return;
 
@@ -210,13 +228,34 @@ function renderLetters(){
     btn.textContent = letters[i];
 
     btn.onclick = function(){
-      alert("قائمة حرف " + this.textContent + " رح نضيفها بالخطوة الجاية");
+      showTripleNames(this.textContent);
     };
 
     box.appendChild(btn);
   }
 
   box.setAttribute("data-ready","1");
+}
+
+function showTripleNames(letter){
+  var names = instaTripleGroups[letter] || [];
+  var box = document.getElementById("tripleNamesGrid");
+  var title = document.getElementById("tripleLetterTitle");
+
+  title.textContent = "يوزرات حرف " + letter;
+  box.innerHTML = "";
+
+  for(var i=0;i<names.length;i++){
+    var btn = document.createElement("button");
+    btn.className = "userBubble";
+    btn.textContent = names[i];
+    btn.onclick = function(){
+      window.location.href = instaLink;
+    };
+    box.appendChild(btn);
+  }
+
+  showPage("instaTripleNames");
 }
 function showPage(id){
   var screens = document.querySelectorAll(".screen");
