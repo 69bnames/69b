@@ -110,10 +110,10 @@ h1{margin:0;font-size:42px;line-height:1.05;font-weight:800}
       <div class="small">تبدأ من 140 ريال أو من 140 درهم وتزداد حسب اليوزر</div>
     </button>
 
-    <button class="card">
-      <div class="title">يوزرات انستا ثلاثي وشبه ثنائي</div>
-      <div class="small">تبدأ من 1600 ريال أو من 1600 درهم وتزداد حسب اليوزر</div>
-    </button>
+    <button class="card" onclick="showPage('instaTripleLetters')">
+  <div class="title">يوزرات انستا ثلاثي وشبه ثنائي</div>
+  <div class="small">تبدأ من 1600 ريال أو من 1600 درهم وتزداد حسب اليوزر</div>
+</button>
 
     <button class="card">
       <div class="title">يوزرات انستا ثنائي</div>
@@ -162,7 +162,16 @@ h1{margin:0;font-size:42px;line-height:1.05;font-weight:800}
     </a>
   </div>
 </section>
+<section id="instaTripleLetters" class="screen">
+  <div class="wrap">
+    <button class="back" onclick="showPage('instagram')">رجوع</button>
 
+    <div class="sectionTitle">ثلاثيات انستا وشبه ثنائي</div>
+    <div class="sectionSub">اختر الحرف الذي تحتاج أن يبدأ به اليوزر.</div>
+
+    <div id="lettersGrid" class="usernameGrid"></div>
+  </div>
+</section>
 <section id="instaQuad" class="screen">
   <div class="wrap">
     <button class="back" onclick="showPage('instagram')">رجوع</button>
@@ -189,7 +198,26 @@ var instaQuadGroups = {
     "r4tt","m4ku","j0ke","q1pl","f1zz","b4sh","z1pp","l4me","d3fy","h4rm","p0wr","g0ne","k1nd","v4mp","x4mi","y4nk","w1nn","c0ol","s4ge","n1ce","t0ny","r0xy","b4nk","f0xx","m1nt","z3ro","p1nk","j4zz","q4ke","d1ce","h0pe","k0re","v0id","x1st","y0ga","w4ll","c4ke","s1nk","n4me","t1me","r4nd","m4ze","j1nx","q0rt","f0ur","b4ld","z0om","l4nd","d4rk","h0ot","p4ce","g4me","k4le","v4ns","x0de","y1nk","w4ve","c4sh","s4il","n1pe","t0on","r1ch","m0on","j0ys","q4il","f4st","b4ze","z4ny","l0ve","d0ck","h1ke","p4ge","g4ng","k4rm","v4st","x0ld","y0ut","w1ld","c4rd","s4lt","n4il","t4lk","r4ce","m1st","j4ws","q4nt","f4me","b4ck","z0ne","l4ce","d4wn","h4te","p1nk","g1ft","k0zy","v0lt","x1st","y4wn","w1sh","c4fe","a9tg","b3nx","c8yl","d7wr","e6pk","f5qm","g2vh","h1zx","i4mf","j6bc","k8dy","l9jw","m2zr","n3lx","o5vk","p4my","q7wn","r1hf","s9pb","t2kc","u3dx","v4yg","w8nm","x5tr","y6zw","z1lp","a7fh","b0qx","c4vn","d2kw","e9jt","f3ry","g6mz","h5wp","i8bk","j1cv","k2yh","l3px","m4jn","n6qt","o7rw","p9zf","q0lk","r2gy","s1xm","t5nv","u4cj","v3rh","w6kp","x8dw"
   ]
 };
+function renderLetters(){
+  var box = document.getElementById("lettersGrid");
+  if(!box || box.getAttribute("data-ready") === "1") return;
 
+  var letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+
+  for(var i=0;i<letters.length;i++){
+    var btn = document.createElement("button");
+    btn.className = "userBubble";
+    btn.textContent = letters[i];
+
+    btn.onclick = function(){
+      alert("قائمة حرف " + this.textContent + " رح نضيفها بالخطوة الجاية");
+    };
+
+    box.appendChild(btn);
+  }
+
+  box.setAttribute("data-ready","1");
+}
 function showPage(id){
   var screens = document.querySelectorAll(".screen");
   for(var i=0;i<screens.length;i++){
@@ -202,8 +230,12 @@ function showPage(id){
   }
 
   if(id === "instaQuad"){
-    renderInstaQuad();
-  }
+  renderInstaQuad();
+}
+
+if(id === "instaTripleLetters"){
+  renderLetters();
+}
 
   window.scrollTo(0,0);
 }
