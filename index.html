@@ -115,10 +115,10 @@ h1{margin:0;font-size:42px;line-height:1.05;font-weight:800}
   <div class="small">تبدأ من 1600 ريال أو من 1600 درهم وتزداد حسب اليوزر</div>
 </button>
 
-    <button class="card">
-      <div class="title">يوزرات انستا ثنائي</div>
-      <div class="small">تبدأ من 15000 ريال أو من 15000 درهم وتزداد حسب اليوزر</div>
-    </button>
+    <button class="card" onclick="showPage('instaDouble')">
+  <div class="title">يوزرات انستا ثنائي</div>
+  <div class="small">تبدأ من 15000 ريال أو من 15000 درهم وتزداد حسب اليوزر</div>
+</button>
   </div>
 </section>
 
@@ -128,20 +128,20 @@ h1{margin:0;font-size:42px;line-height:1.05;font-weight:800}
     <div class="sectionTitle">يوزرات سناب</div>
     <div class="sectionSub">اختر الفئة المناسبة، والسعر يختلف حسب قوة وتميّز اليوزر.</div>
 
-    <button class="card">
-      <div class="title">يوزرات سناب رباعي وشبه ثلاثي</div>
-      <div class="small">تبدأ من 250 ريال أو من 250 درهم وتزداد حسب اليوزر</div>
-    </button>
+    <button class="card" onclick="showPage('snapQuad')">
+  <div class="title">يوزرات سناب رباعي وشبه ثلاثي</div>
+  <div class="small">تبدأ من 250 ريال أو من 250 درهم وتزداد حسب اليوزر</div>
+</button>
 
-    <button class="card">
-      <div class="title">يوزرات سناب ثلاثي وشبه ثنائي</div>
-      <div class="small">تبدأ من 2500 ريال أو من 2500 درهم وتزداد حسب اليوزر</div>
-    </button>
+<button class="card" onclick="showPage('snapTriple')">
+  <div class="title">يوزرات سناب ثلاثي وشبه ثنائي</div>
+  <div class="small">تبدأ من 2500 ريال أو من 2500 درهم وتزداد حسب اليوزر</div>
+</button>
 
-    <button class="card">
-      <div class="title">يوزرات سناب ثنائي</div>
-      <div class="small">تبدأ من 18000 ريال أو من 18000 درهم وتزداد حسب اليوزر</div>
-    </button>
+<button class="card" onclick="showPage('snapDouble')">
+  <div class="title">يوزرات سناب ثنائي</div>
+  <div class="small">تبدأ من 18000 ريال أو من 18000 درهم وتزداد حسب اليوزر</div>
+</button>
   </div>
 </section>
 
@@ -160,6 +160,41 @@ h1{margin:0;font-size:42px;line-height:1.05;font-weight:800}
         <div class="icon">💬</div>
       </div>
     </a>
+  </div>
+</section>
+  <section id="instaDouble" class="screen">
+  <div class="wrap">
+    <button class="back" onclick="showPage('instagram')">رجوع</button>
+    <div class="sectionTitle">ثنائيات انستا</div>
+    <div class="sectionSub">اختر اليوزر المناسب، وسيتم تحويلك مباشرة للتواصل والشراء.</div>
+    <div id="instaDoubleList" class="usernameGrid"></div>
+  </div>
+</section>
+
+<section id="snapQuad" class="screen">
+  <div class="wrap">
+    <button class="back" onclick="showPage('snap')">رجوع</button>
+    <div class="sectionTitle">رباعيات سناب وشبه ثلاثي</div>
+    <div class="sectionSub">اختر اليوزر المناسب، وسيتم تحويلك مباشرة للتواصل والشراء.</div>
+    <div id="snapQuadList"></div>
+  </div>
+</section>
+
+<section id="snapTriple" class="screen">
+  <div class="wrap">
+    <button class="back" onclick="showPage('snap')">رجوع</button>
+    <div class="sectionTitle">ثلاثيات سناب وشبه ثنائي</div>
+    <div class="sectionSub">اختر اليوزر المناسب، وسيتم تحويلك مباشرة للتواصل والشراء.</div>
+    <div id="snapTripleList" class="usernameGrid"></div>
+  </div>
+</section>
+
+<section id="snapDouble" class="screen">
+  <div class="wrap">
+    <button class="back" onclick="showPage('snap')">رجوع</button>
+    <div class="sectionTitle">ثنائيات سناب</div>
+    <div class="sectionSub">اختر اليوزر المناسب، وسيتم تحويلك مباشرة للتواصل والشراء.</div>
+    <div id="snapDoubleList" class="usernameGrid"></div>
   </div>
 </section>
 <section id="instaTripleLetters" class="screen">
@@ -255,6 +290,150 @@ var instaTripleGroups = {
 "Z": ["ZQH","ZBZ","ZLX","ZTX","ZkZ","ZMR","ZZ3","Z8Z","4ZZ","Z6Z","ZZ1","7ZZ","ZVV","VZV","ZCC","CZC","ZDD","DZD","ZGG","GZG","Z44","4Z4","99Z","Z77","7Z7","ZZ2","Z.A","5.Z","Z.3","8.Z","Z.F","Z.P","Z.6","Z_R","_RZ","2_Z","Z_9","_HZ","_ZK","Z_J","_TZ","Z3F","ZK8","6ZT","Z2P","Z7R","Z9M","Z4G","Z1L","Z5N","Z8Q","ZBT","ZBL","ZBC","ZBM","ZBN","ZBR","ZBP","Z9A","ZQ2","Z4M","ZH7","Z2X","Z5K","Z8N","Z1R","Z6P","Z3G"]
   
 };
+  var instaDoubleList = `
+A7 A3 AX 5A AQ
+B7 B3 BX 5B BQ
+C7 C3 CX 5C CQ
+D7 D3 DT 6D DQ
+E9 E2 EJ 7E EP
+F9 F2 FK 8F FQ
+G7 G2 GK 9G GQ
+H3 HK 7H HT
+i7 iA 9i iX 3i
+JZ JQ 4J JX 7J
+K7 KQ 5K K2 KR
+L7 LQ 8L L2 LZ
+M4 MZ 5M M7 M9
+N5 NQ 8N NT 2N NA
+O9 OX 5O OZ 8O
+P7 PZ 5P P3 PR 9P
+Q7 QH QP 3Q 8Q
+R4 RZ 7R R8 RH
+S6 SK 3S S1 SX
+T9 TM 4T T2 TH
+U5 UQ 8U 3U UZ
+V4 VT 2V 7V VZ
+W7 WQ 5W 3W WT
+X8 XT 3X XQ 9X
+Y4 YL 8Y YH 1Y
+Z5 ZP 6Z ZT 2Z
+`.trim().split(/\s+/);
+
+var snapTripleList = `
+x.5 y.b z.c a.d b.e c.f d.g e.h
+f.i g.j h.k i.l j.m k.n
+v_7 v_8 w_9 x_a y_b z_c
+a_d b_e c_f d_g e_h f_i
+g_j h_k i_l
+a1x b2y c3z d4a e5b f6c
+g7d h8e i9f j0g k1h l2i
+m3j n4k o5l p6m q7n r8o
+s9p t0q u1r v2s w3t x4u
+y5v z6w a7x b8y c9z d0a
+e1b f2c g3d h4e i5f j6g
+k7h l8i m9j n0k o1l p2m
+q3n r4o s5p t6q u7r v8s
+w9t x0u
+`.trim().split(/\s+/);
+
+var snapDoubleList = `
+XC ZK PA FD F8 C9 G2
+J9 JP JA HT HB HK
+`.trim().split(/\s+/);
+
+var snapQuadGroups = {
+
+"شبه ثلاثي نقطه": [
+"c.5d","c.vd","v.kd","v.jz","b.lp","a.xs","h.rt","f.uj",
+"e.gh","g.yh","j.sd","k.vd","l.nd","m.zd","n.fd","o.jd",
+"p.ed","q.sd","r.rd","s.td","t.yd","u.ud","w.id","x.od",
+"y.ld","z.pd"
+],
+
+"شبه ثلاثي شخطه": [
+"t8_w","s9_x","r0_y","q1_z","p2_a","o3_b","n4_c",
+"m5_d","l6_e","k7_f","j8_g","i9_h","h0_i","g1_j"
+],
+
+"رباعيات مكرره": [
+"aavd","ssoi","ggmk","hjyq","ttre","nnvf","kkpj","bbrt"
+],
+
+"رباعيات عادية": [
+"x1vy","p6ok","s2um","g9ai","r5ed","t4wn","d0fu","n7ce"
+]
+
+};
+
+function renderSimpleList(containerId, list){
+  var box = document.getElementById(containerId);
+
+  if(!box || box.getAttribute("data-ready") === "1") return;
+
+  for(var i=0;i<list.length;i++){
+
+    var btn = document.createElement("button");
+
+    btn.className = "userBubble";
+
+    btn.textContent = list[i];
+
+    btn.onclick = function(){
+      window.location.href = instaLink;
+    };
+
+    box.appendChild(btn);
+  }
+
+  box.setAttribute("data-ready","1");
+}
+
+function renderSnapQuad(){
+
+  var box = document.getElementById("snapQuadList");
+
+  if(!box || box.getAttribute("data-ready") === "1") return;
+
+  for(var title in snapQuadGroups){
+
+    var block = document.createElement("div");
+
+    block.className = "usernameBlock";
+
+    var h = document.createElement("h3");
+
+    h.textContent = title;
+
+    var grid = document.createElement("div");
+
+    grid.className = "usernameGrid";
+
+    var names = snapQuadGroups[title];
+
+    for(var i=0;i<names.length;i++){
+
+      var btn = document.createElement("button");
+
+      btn.className = "userBubble";
+
+      btn.textContent = names[i];
+
+      btn.onclick = function(){
+        window.location.href = instaLink;
+      };
+
+      grid.appendChild(btn);
+    }
+
+    block.appendChild(h);
+
+    block.appendChild(grid);
+
+    box.appendChild(block);
+  }
+
+  box.setAttribute("data-ready","1");
+}
   function renderLetters(){
   var box = document.getElementById("lettersGrid");
   if(!box || box.getAttribute("data-ready") === "1") return;
@@ -351,6 +530,69 @@ function renderInstaQuad(){
 
   box.setAttribute("data-ready","1");
 }
+  <section id="instaDouble" class="screen">
+  <div class="wrap">
+
+    <button class="back" onclick="showPage('instagram')">رجوع</button>
+
+    <div class="sectionTitle">ثنائيات انستا</div>
+
+    <div class="sectionSub">
+      اختر اليوزر المناسب وسيتم تحويلك للتواصل مباشرة.
+    </div>
+
+    <div id="instaDoubleGrid" class="usernameGrid"></div>
+
+  </div>
+</section>
+
+<section id="snapQuad" class="screen">
+  <div class="wrap">
+
+    <button class="back" onclick="showPage('snap')">رجوع</button>
+
+    <div class="sectionTitle">رباعي سناب وشبه ثلاثي</div>
+
+    <div class="sectionSub">
+      اختر اليوزر المناسب وسيتم تحويلك للتواصل مباشرة.
+    </div>
+
+    <div id="snapQuadList"></div>
+
+  </div>
+</section>
+
+<section id="snapTriple" class="screen">
+  <div class="wrap">
+
+    <button class="back" onclick="showPage('snap')">رجوع</button>
+
+    <div class="sectionTitle">ثلاثي سناب وشبه ثنائي</div>
+
+    <div class="sectionSub">
+      اختر اليوزر المناسب وسيتم تحويلك للتواصل مباشرة.
+    </div>
+
+    <div id="snapTripleGrid" class="usernameGrid"></div>
+
+  </div>
+</section>
+
+<section id="snapDouble" class="screen">
+  <div class="wrap">
+
+    <button class="back" onclick="showPage('snap')">رجوع</button>
+
+    <div class="sectionTitle">ثنائيات سناب</div>
+
+    <div class="sectionSub">
+      اختر اليوزر المناسب وسيتم تحويلك للتواصل مباشرة.
+    </div>
+
+    <div id="snapDoubleGrid" class="usernameGrid"></div>
+
+  </div>
+</section>
 </script>
 
 </body>
